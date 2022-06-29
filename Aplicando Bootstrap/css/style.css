@@ -235,6 +235,49 @@ li{
     width: 18.5rem;
 }
 
+/* PLANES */
+
+.titlePlanes{
+    font-size: 1.5rem;
+}
+
+.plan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+}
+
+.imagesPlanes{
+    max-width: 25rem;
+}
+
+.titleComoFunciona{
+    font-size: 2rem;
+}
+
+.pasos{
+    background-color: #cacaca;
+    padding: 3.5rem 1.5rem 0.5rem 1.5rem;
+    max-width: 20rem;
+    margin: 1rem;
+}
+
+.numberPasos{
+    background-color: #ff6666;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    margin-top: -95px;
+    font-size: 2rem;
+    font-family: 'Baloo 2';
+}
+
+.buttonEscribime:hover{
+    color: #ffffff;
+}
+
 /* ARTICULOS */
 
 .article{
@@ -256,19 +299,12 @@ li{
 
 /* CONTACTO */
 
-.formContacto{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .formContacto div h2{
     font-size: 1.8rem;
-    margin: 0.55vh 0;
+    margin: 1.5rem 0;
 }
 
 .formField{
-    width: 80%;
     font-size: 1rem;
     height: 2rem;
     margin: 10px;
@@ -278,8 +314,11 @@ li{
     font-family: 'Raleway', sans-serif;
 }
 
+    .formField:focus-visible{
+        outline-color: #ff4d4d;
+    }
+
 .formFieldText{
-    width: 80%;
     font-size: 1rem;
     height: 7rem;
     margin: 10px;
@@ -290,11 +329,15 @@ li{
     resize: none;
 }
 
+    .formFieldText:focus-visible{
+        outline-color: #ff4d4d;
+    }
+
 .buttonContacto{
-    width: 7.5rem;
+    width: 8.5rem;
     height: 2rem;
     font-size: 1.1rem;
-    margin: 5px;
+    margin: 1rem 5px 1.5rem 5px;
 }
 
 /* >380px (telefonos modernos) */
@@ -309,6 +352,35 @@ li{
     }
 } 
 
+/* >768px (md bootstrap)*/
+
+@media (min-width: 768px) {
+    /* contacto */
+
+    .formContacto div h2{
+        font-size: 1.8rem;
+    }
+    
+    .formField{
+        height: 2.5rem;
+    }
+    
+    .formFieldText{
+        height: 7.5rem;
+    }
+    
+    .buttonContacto{
+        height: 2.5rem;
+    }
+
+    /* planes */
+
+    .buttonEscribime{
+        width: 10rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+}
 
 /* >992px (lg bootstrap) */
 @media (min-width: 992px) {
@@ -376,4 +448,69 @@ li{
 
     /* conoceme */
 
-} 
+    .conocemeSection {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 0.7fr 1.3fr;
+        grid-template-rows: auto auto auto;
+        gap: 0px 0px;
+        align-items: center;
+        grid-template-areas:
+        "conocemeImage conocemeTitle"
+        "conocemeImage conocemeParagraph"
+        ". conocemeTitleImage";
+    }
+    
+    .conocemeTitle{
+        margin: 50px 0 0 0;
+        grid-area: conocemeTitle;
+    }
+    .conocemeTitle h2{
+        font-size: 3rem;
+    }
+
+    .conocemeParagraph{
+        grid-area: conocemeParagraph;
+        padding: 0 0 1rem 0;
+    }
+    
+    .conocemeImage{
+        align-items: center;
+        grid-area: conocemeImage;
+        margin-right: 5px;
+    }
+    
+    .conocemeImage img{
+        width: 22rem;
+        margin-top: 50px;
+    }
+    
+    .conocemeTitleImage{
+        margin-bottom: 50px;
+        grid-area: conocemeTitleImage;
+    }
+    
+    .conocemeTitleImage img{
+        width: 25.5rem;
+    }
+
+    /* contacto */
+    .formContacto div h2{
+        font-size: 2rem;
+    }
+    
+    .formField{
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    
+    .formFieldText{
+        height: 8rem;
+        font-size: 1.2rem;
+    }
+    
+    .buttonContacto{
+        height: 2.5rem;
+        margin: 1.5rem 1.5rem;
+    }
+}
