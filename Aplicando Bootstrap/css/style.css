@@ -162,15 +162,9 @@ li{
     border-radius: 30px;
 }
 
-.carousel-caption h5{
-    background-color: rgba(255, 255, 255, 0.699);
-    color: black;
-    border-radius: 15px;
-}
-
 .img-carousel{
-    max-height: 35rem;
-    object-fit: cover;
+    max-height: 40rem;
+    object-fit: fill;
 }
 
 .containerModalidad{
